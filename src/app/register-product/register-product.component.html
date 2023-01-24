@@ -1,0 +1,57 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Producto</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Nombre: </label>
+            <input 
+                type="text"
+                class="form-control"
+                id="nombre"
+                [(ngModel)]="product.name"
+                name="name"
+            >
+        </div>
+        <div class="form-group">
+            <label>Min: </label>
+            <input 
+                type="number"
+                class="form-control"
+                id="min"
+                [(ngModel)]="product.min"
+                name="min"
+            >
+        </div>
+        <div class="form-group">
+            <label>Max: </label>
+            <input 
+                type="number"
+                class="form-control"
+                id="max"
+                [(ngModel)]="product.max"
+                name="max"
+            >
+        </div>
+        <div class="form-group">
+            <label>Stock: </label>
+            <input 
+                type="number"
+                class="form-control"
+                id="inInventrory"
+                [(ngModel)]="product.inInventrory"
+                name="inInventrory"
+            >
+        </div>
+        <div class="form-group">
+            <label class="form-check-label" for="exampleCheck1">Disponible:</label>
+            <input 
+                type="checkbox" 
+                class="form-check-input m-2" 
+                id="enable"
+                [(ngModel)]="product.enable"
+                name="enable"
+                value=false
+            >      
+        </div>
+        <button class="btn btn-success">Guardar</button>
+    </form>
+</div>
